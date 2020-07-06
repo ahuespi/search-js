@@ -11,7 +11,8 @@
 <style>
     body {
         margin: 0;
-        background: #8f57fd;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(13, 150, 133, 1) 69%);
         font-family: 'Muli', sans-serif;
     }
     
@@ -19,7 +20,7 @@
         width: 100%;
         height: 80px;
         display: flex;
-        background: #8f57fd;
+        /* background: #8f57fd; */
         justify-content: space-between;
         align-items: center;
     }
@@ -129,6 +130,7 @@
         cursor: pointer;
         transition: 450ms all;
         transform-origin: center left;
+        position: relative;
     }
     
     .carrousel-item:hover~.carrousel-item {
@@ -148,6 +150,25 @@
         width: 200px;
         height: 250px;
         object-fit: cover;
+    }
+    
+    .carrousel-item__details {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .carrousel-item:hover .carrousel-item__details {
+        opacity: 1;
     }
 </style>
 
